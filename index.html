@@ -3,181 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Form Reservasi Paris Van Java</title>
+<title>Eksplore Siak</title>
 
 <style>
-    body{
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #8EC5FC, #E0C3FC);
-        margin: 0;
-        padding: 20px;
-    }
 
-    .container{
-        max-width: 700px;
-        background: white;
-        margin: auto;
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    h2{
-        text-align: center;
-        color: #333;
-    }
+body{
+font-family:Georgia, serif;
+}
 
-    fieldset{
-        border: 2px solid #8E44AD;
-        border-radius: 10px;
-        margin-bottom: 15px;
-        padding: 15px;
-    }
 
-    legend{
-        font-weight: bold;
-        color: #8E44AD;
-    }
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+height:50px;
+background:transparent;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 15px;
+transition:0.4s;
+z-index:10;
+}
 
-    input, select{
-        width: 100%;
-        padding: 8px;
-        margin-top: 5px;
-        margin-bottom: 12px;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-        transition: 0.3s;
-    }
+.logo{
+font-size:18px;
+font-weight:bold;
+color:white;
+}
 
-    input:focus, select:focus{
-        border-color: #8E44AD;
-        box-shadow: 0 0 5px rgba(142,68,173,0.7);
-        outline: none;
-    }
+.icon{
+font-size:20px;
+color:white;
+}
 
-    .radio-group input,
-    .checkbox-group input{
-        width: auto;
-        margin-right: 5px;
-    }
 
-    .btn{
-        width: 48%;
-        padding: 10px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        font-weight: bold;
-        transition: 0.3s;
-    }
+.navbar.active{
+background:#fff9c4;
+}
 
-    .submit{
-        background: #8E44AD;
-        color: white;
-    }
+.navbar.active .logo,
+.navbar.active .icon{
+color:#333;
+}
 
-    .submit:hover{
-        background: #6C3483;
-    }
 
-    .reset{
-        background: #ccc;
-    }
+.hero{
+position:relative;
+height:100vh;
+background-image:url("https://image2url.com/r2/default/images/1774934239227-15be9aad-ac91-44bc-8f86-cc80fc3d1231.jpg");
+background-size:cover;
+background-position:center;
+}
 
-    .reset:hover{
-        background: #999;
-        color: white;
-    }
+.kecil{
+position:absolute;
+top:38%;
+left:50%;
+transform:translate(-50%,-50%);
+color:#FFD84D;
+font-size:28px;
+}
 
-    .button-group{
-        display: flex;
-        justify-content: space-between;
-    }
+.besar{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:#FFD84D;
+font-size:120px;
+font-weight:bold;
+}
+
+
+.video-section{
+background:#fff9c4;
+padding:80px 0;
+text-align:center;
+}
+
+.video-title{
+font-size:40px;
+font-weight:bold;
+margin-bottom:30px;
+color:#333;
+}
+
+.video-section video{
+width:70%;
+max-width:700px;
+border-radius:10px;
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
-<h2>Form Reservasi - Paris Van Java (Bandung)</h2>
-
-<form action="#" method="post" enctype="multipart/form-data">
-
-    <!-- Hidden -->
-    <input type="hidden" name="id_partner" value="PVJ2026">
-
-    <fieldset>
-        <legend>Data Keamanan</legend>
-        <label>PIN (6 Digit)</label>
-        <input type="password" name="pin" pattern="[0-9]{6}" maxlength="6"
-        placeholder="Masukkan 6 digit PIN" required>
-    </fieldset>
-
-    <fieldset>
-        <legend>Lokasi Penjemputan</legend>
-        <label>Pilih Titik Jemput</label>
-        <select name="lokasi" required>
-            <option value="">-- Pilih Lokasi --</option>
-            <option>Bandara Husein Sastranegara</option>
-            <option>Stasiun Bandung</option>
-            <option>Terminal Leuwi Panjang</option>
-            <option>Terminal Cicaheum</option>
-        </select>
-    </fieldset>
-
-    <fieldset>
-        <legend>Detail Keberangkatan</legend>
-
-        <label>Cari Destinasi</label>
-        <input type="search" name="destinasi"
-        placeholder="Paris Van Java Mall / Lembang / Dago" required>
-
-        <label>Tanggal Keberangkatan</label>
-        <input type="date" name="tanggal" required>
-
-        <label>Jam Kumpul</label>
-        <input type="time" name="waktu" required>
-
-        <label>Jumlah Peserta (1-20)</label>
-        <input type="number" name="kapasitas" min="1" max="20" required>
-    </fieldset>
-
-    <fieldset>
-        <legend>Preferensi Personal</legend>
-
-        <label>Link Media Sosial</label>
-        <input type="url" name="media_sosial"
-        placeholder="https://instagram.com/username" required>
-
-        <label>Warna Seragam</label>
-        <input type="color" name="warna_seragam">
-    </fieldset>
-
-    <fieldset>
-        <legend>Opsi Tambahan</legend>
-
-        <label>Metode Pembayaran</label><br>
-        <input type="radio" name="pembayaran" value="full" required> Full Payment
-        <input type="radio" name="pembayaran" value="dp"> DP 50%
-        <br><br>
-
-        <label>Fasilitas Ekstra</label><br>
-        <input type="checkbox" name="fasilitas[]" value="asuransi"> Asuransi
-        <input type="checkbox" name="fasilitas[]" value="kamera"> Kamera
-        <input type="checkbox" name="fasilitas[]" value="makan"> Makan Malam
-        <br><br>
-
-        <label>Upload KTP / Paspor</label>
-        <input type="file" name="dokumen" accept=".jpg,.jpeg,.png,.pdf" required>
-    </fieldset>
-
-    <div class="button-group">
-        <button type="submit" class="btn submit">Kirim</button>
-        <button type="reset" class="btn reset">Reset</button>
-    </div>
-
-</form>
+<!-- MENU -->
+<div class="navbar" id="navbar">
+<div class="icon">☰</div>
+<div class="logo">Siak</div>
+<div class="icon">♡</div>
 </div>
+
+<!-- HERO -->
+<div class="hero">
+<div class="kecil">Datang dan jelajahi</div>
+<div class="besar">Eksplore Siak</div>
+</div>
+
+<!-- VIDEO -->
+<div class="video-section">
+
+<div class="video-title">
+Video Wisata Siak
+</div>
+
+<video autoplay muted loop playsinline>
+<source src="https://image2url.com/r2/default/videos/1774421116080-fd06d6fa-4493-410e-8373-7c3ad8818755.mp4" type="video/mp4">
+</video>
+
+</div>
+
+<script>
+
+
+window.addEventListener("scroll", function(){
+let navbar = document.getElementById("navbar");
+if(window.scrollY > 50){
+navbar.classList.add("active");
+}else{
+navbar.classList.remove("active");
+}
+});
+
+</script>
 
 </body>
 </html>

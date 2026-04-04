@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pusat Bantuan Wisata Siak</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background:#FFF4B5;
+margin:0;
+padding:40px;
+}
+
+h2{
+text-align:center;
+margin-bottom:10px;
+}
+
+.fungsi{
+text-align:center;
+margin-bottom:30px;
+}
+
+
+.container{
+max-width:900px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+
+.card{
+background:#FFFBE6;
+padding:25px;
+border-radius:15px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+animation:fadeUp 1s ease;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+
+.icon{
+font-size:40px;
+margin-bottom:10px;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+button{
+margin-top:10px;
+padding:8px 15px;
+border:none;
+background:#FFD54F;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#FFC107;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2> Pusat Bantuan & Kontak</h2>
+<p class="fungsi"></b> Membantu para wisatawan.</p>
+
+<div class="container">
+
+<div class="card">
+<div class="icon">📞</div>
+<h3>Emergency Numbers</h3>
+<p>Nomor telepon penting seperti polisi, ambulans, dan layanan wisata untuk membantu wisatawan saat keadaan darurat.</p>
+<button onclick="alert('Polisi: 110\nAmbulans: 118\nInfo Wisata Siak: 0764-000')">
+Lihat Nomor
+</button>
+</div>
+
+<div class="card">
+<div class="icon">❓</div>
+<h3>FAQ</h3>
+<p>Pertanyaan umum wisatawan seperti keamanan, air minum, dan kondisi cuaca di Kabupaten Siak.</p>
+<button onclick="alert('Air minum aman jika menggunakan air kemasan.\nCuaca Siak cenderung panas dan lembap.\nDaerah wisata cukup aman.')">
+Lihat FAQ
+</button>
+</div>
+
+<div class="card">
+<div class="icon">🤖</div>
+<h3>Chatbot AI</h3>
+<p>Layanan bantuan wisata 24/7 untuk menjawab pertanyaan wisatawan tentang destinasi dan informasi perjalanan.</p>
+<button onclick="alert('Halo! Saya AI Wisata Siak 🤖\nAda yang bisa saya bantu?')">
+Chat Sekarang
+</button>
+</div>
+
+</div>
+
+</body>
+</html>

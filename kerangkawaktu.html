@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Itinerary Wisata Siak</title>
+
+<style>
+
+body{
+font-family:Arial, sans-serif;
+background:#FFF3B0;
+margin:0;
+padding:40px;
+}
+
+
+.title{
+text-align:center;
+margin-bottom:30px;
+}
+
+.title h2{
+margin:0;
+}
+
+.title p{
+color:#444;
+}
+
+
+.container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:900px;
+margin:auto;
+}
+
+
+.card{
+background:#FFF9DB;
+padding:25px;
+border-radius:15px;
+box-shadow:0 6px 12px rgba(0,0,0,0.1);
+transition:0.3s;
+animation:fadeUp 1s ease;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+
+.icon{
+font-size:35px;
+margin-bottom:10px;
+}
+
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="title">
+<h2>Itinerari Inspirasi</h2>
+<p>Contoh rencana perjalanan wisata di Kabupaten Siak untuk membantu wisatawan mengatur waktu perjalanan.</p>
+</div>
+
+<div class="container">
+
+<div class="card">
+<div class="icon">🧳</div>
+<h3>Perjalanan Pertama (7 Hari)</h3>
+<p>
+Itinerary untuk wisatawan yang baru pertama kali datang ke Siak. 
+Destinasi yang bisa dikunjungi antara lain Istana Siak, Jembatan Tengku Agung Sultanah Latifah, dan kawasan wisata sejarah.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🌿</div>
+<h3>Petualangan Tersembunyi (14 Hari)</h3>
+<p>
+Rute perjalanan bagi wisatawan yang ingin mengeksplorasi tempat-tempat yang belum banyak diketahui orang seperti desa wisata, wisata alam, dan budaya lokal di Siak.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💰</div>
+<h3>Pilihan Hemat atau Mewah</h3>
+<p>
+Wisatawan dapat memilih rencana perjalanan sesuai dengan anggaran, mulai dari perjalanan hemat hingga pengalaman wisata yang lebih eksklusif.
+</p>
+</div>
+
+</div>
+
+</body>
+</html>

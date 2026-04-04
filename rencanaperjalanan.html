@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wisata Kabupaten Siak</title>
+
+<!-- ICON -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#FFF9DB; 
+color:#333;
+}
+
+.hero{
+position:relative;
+height:400px;
+background:url("https://upload.wikimedia.org/wikipedia/commons/3/3c/Istana_Siak.jpg") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(255, 221, 87, 0.35); 
+top:0;
+left:0;
+}
+
+.hero-text{
+position:relative;
+z-index:1;
+}
+
+.hero-text h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero-text p{
+font-size:18px;
+}
+
+
+.container{
+width:90%;
+max-width:1000px;
+margin:auto;
+padding:40px 0;
+}
+
+
+.section-title{
+text-align:center;
+font-size:28px;
+margin-bottom:25px;
+color:#c9a200;
+}
+
+
+.card{
+background:#FFFDF0;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+margin-bottom:30px;
+}
+
+
+.plan-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.plan-item{
+background:#FFFDF0;
+padding:20px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.plan-item:hover{
+transform:translateY(-5px);
+}
+
+.plan-item i{
+font-size:30px;
+color:#e0b000;
+margin-bottom:10px;
+}
+
+
+.dest-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.dest{
+background:#FFFDF;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.dest:hover{
+transform:scale(1.05);
+}
+
+.dest img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.dest h3{
+padding:10px;
+text-align:center;
+}
+
+
+footer{
+background:#FFE066;
+text-align:center;
+padding:15px;
+margin-top:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<div class="hero-text">
+<h1>Rencana Perjalanan</h1>
+<p>Jelajahi sejarah, budaya, dan keindahan Melayu Siak</p>
+</div>
+</div>
+
+<div class="container">
+
+<!-- TENTANG -->
+<div class="card">
+<h2 class="section-title">Tentang Siak</h2>
+
+<p>
+Kabupaten Siak merupakan salah satu daerah wisata budaya di Provinsi Riau
+yang terkenal dengan sejarah Kesultanan Siak Sri Indrapura. Daerah ini
+memiliki berbagai destinasi wisata sejarah, budaya, dan tradisi Melayu
+yang masih dilestarikan hingga sekarang.
+</p>
+
+</div>
+
+<!-- PLAN YOUR TRIP -->
+<h2 class="section-title">Plan Your Trip</h2>
+
+<div class="plan-grid">
+
+<div class="plan-item">
+<i class="fas fa-bus"></i>
+<h3>Transportasi Umum</h3>
+<p>Gunakan bus, travel, atau ojek online untuk berkeliling wilayah Siak.</p>
+</div>
+
+<div class="plan-item">
+<i class="fas fa-car"></i>
+<h3>Sewa Mobil</h3>
+<p>Tersedia jasa rental mobil untuk wisatawan yang ingin perjalanan lebih nyaman.</p>
+</div>
+
+<div class="plan-item">
+<i class="fas fa-money-bill-wave"></i>
+<h3>Kurs Mata Uang</h3>
+<p>Mata uang yang digunakan adalah Rupiah (IDR).</p>
+</div>
+
+<div class="plan-item">
+<i class="fas fa-sim-card"></i>
+<h3>Kartu SIM Lokal</h3>
+<p>Kartu SIM Telkomsel, XL, atau Indosat tersedia di toko ponsel dan minimarket.</p>
+</div>
+
+</div>
+
