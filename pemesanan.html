@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Wisata Siak</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#FFFACD;
+padding-top:90px;
+}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+height:70px;
+display:flex;
+align-items:center;
+padding:0 15px;
+z-index:100;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(10px);
+transition:0.4s;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#FFD84D;
+margin-right:20px;
+}
+
+.menu{
+display:flex;
+gap:22px;
+overflow-x:auto;
+white-space:nowrap;
+scrollbar-width:none;
+}
+
+.menu::-webkit-scrollbar{
+display:none;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-size:16px;
+}
+
+.menu a:hover{
+color:#FFD84D;
+}
+
+/* NAVBAR SCROLL */
+.navbar.active{
+background:#fff9c4;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.navbar.active .menu a,
+.navbar.active .logo{
+color:#333;
+}
+
+/* BACK BUTTON */
+.back-btn{
+display:inline-block;
+margin:20px;
+padding:10px 20px;
+font-weight:bold;
+color:white;
+text-decoration:none;
+border-radius:10px;
+background:linear-gradient(45deg,#FFD54F,#FF9800);
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* HEADER */
+header{
+text-align:center;
+padding:10px;
+font-size:28px;
+font-weight:bold;
+color:#5D4037;
+}
+
+/* CONTAINER */
+.container{
+max-width:850px;
+margin:auto;
+padding:20px;
+}
+
+/* CARD FORM */
+.card{
+background:linear-gradient(135deg,#FFF9C4,#FFD54F);
+padding:25px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+label{
+font-weight:bold;
+display:block;
+margin-top:10px;
+color:#5D4037;
+}
+
+input, select, textarea{
+width:100%;
+padding:10px;
+margin-top:5px;
+margin-bottom:15px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+/* BUTTON */
+button{
+width:100%;
+padding:12px;
+background:#F5C857;
+color:white;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#e0ad2b;
+}
+
+/* INVOICE */
+.invoice{
+display:none;
+background:linear-gradient(135deg,#FFF9C4,#FFD54F);
+padding:25px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+line-height:1.8;
+}
+
+.price-box{
+margin-top:10px;
+padding:10px;
+background:white;
+border-radius:10px;
+}
+
+.total{
+margin-top:10px;
+font-size:18px;
+font-weight:bold;
+}
+
+.thanks{
+margin-top:20px;
+text-align:center;
+font-weight:bold;
+}
+
+/* BUTTON KEMBALI */
+.back-form{
+margin-top:15px;
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+font-size:16px;
+background:linear-gradient(90deg,#FFD84D,#F5C857);
+color:#333;
+}
+
+/* FOOTER */
+footer{
+display:none;
+text-align:center;
+padding:20px;
+font-size:14px;
+color:#333;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar" id="navbar">
+
+<div class="logo">Siak</div>
+
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="wisata.html">Wisata</a>
+<a href="budaya.html">Budaya</a>
+<a href="kuliner.html">Kuliner</a>
+<a href="galery.html">Galery</a>
+<a href="hotel.html">Hotel</a>
+<a href="transportasi.html">Transportasi</a>
+<a href="event.html">Event</a>
+<a href="review.html">Review</a>
+<a href="pusatbantuan.html">Pusat Bantuan</a>
+<a href="peta.html">Peta</a>
+<a href="rencana.html">Rencana</a>
+<a href="kerangkawaktu.html">Kerangka</a>
+<a href="pemesanan.html">Pemesanan</a>
+</div>
+
+</div>
+
+<!-- BACK -->
+<a href="index.html" class="back-btn">⬅ Back</a>
+
+<header>Booking Wisata Kabupaten Siak</header>
+
+<div class="container">
+
+<!-- FORM -->
+<div class="card" id="formBox">
+
+<h2>Form Booking Wisata</h2>
+
+<label>Nama</label>
+<input type="text" id="nama">
+
+<label>Email</label>
+<input type="email" id="email">
+
+<label>No HP</label>
+<input type="text" id="hp">
+
+<label>Destinasi Wisata</label>
+<select id="destinasi">
+<option value="Istana Siak|50000">Istana Siak - Rp 50.000</option>
+<option value="Jembatan Siak|30000">Jembatan Tengku Agung - Rp 30.000</option>
+<option value="Makam Sultan|25000">Makam Sultan - Rp 25.000</option>
+<option value="Sungai Siak|40000">Wisata Sungai Siak - Rp 40.000</option>
+</select>
+
+<label>Kendaraan</label>
+<select id="kendaraan">
+<option>Mobil Pribadi</option>
+<option>Bus Pariwisata</option>
+<option>Travel</option>
+</select>
+
+<label>Jumlah Orang</label>
+<input type="number" id="orang">
+
+<label>Tanggal Kunjungan</label>
+<input type="date" id="tanggal">
+
+<label>Catatan</label>
+<textarea id="catatan"></textarea>
+
+<button onclick="buatInvoice()">Buat Invoice</button>
+
+</div>
+
+<!-- INVOICE -->
+<div class="invoice" id="invoice">
+
+<h3>INVOICE WISATA SIAK</h3>
+<hr>
+
+<div id="isiInvoice"></div>
+
+<div class="price-box" id="hargaPerOrang"></div>
+
+<div class="total" id="totalHarga"></div>
+
+<div class="thanks">
+Terima kasih telah melakukan pemesanan wisata di Kabupaten Siak.
+</div>
+
+<button class="back-form" onclick="kembali()">Kembali ke Form</button>
+
+</div>
+
+</div>
+
+<footer id="footer">
+© sania hermawati 2026
+</footer>
+
+<script>
+
+const cards=document.querySelectorAll('.card');
+
+function reveal(){
+const trigger=window.innerHeight*0.85;
+
+cards.forEach(card=>{
+const top=card.getBoundingClientRect().top;
+
+if(top<trigger){
+card.classList.add('show');
+}
+});
+}
+
+window.addEventListener('scroll',reveal);
+reveal();
+
+/* navbar scroll */
+window.addEventListener("scroll",function(){
+let navbar=document.getElementById("navbar");
+
+if(window.scrollY>50){
+navbar.classList.add("active");
+}else{
+navbar.classList.remove("active");
+}
+});
+
+function buatInvoice(){
+
+let nama=document.getElementById("nama").value;
+let email=document.getElementById("email").value;
+let hp=document.getElementById("hp").value;
+
+let destinasiData=document.getElementById("destinasi").value.split("|");
+let destinasi=destinasiData[0];
+let harga=parseInt(destinasiData[1]);
+
+let kendaraan=document.getElementById("kendaraan").value;
+let orang=parseInt(document.getElementById("orang").value);
+let tanggal=document.getElementById("tanggal").value;
+let catatan=document.getElementById("catatan").value;
+
+if(!nama || !email || !hp || !orang || !tanggal){
+alert("Isi data dengan lengkap");
+return;
+}
+
+let total=harga*orang;
+
+document.getElementById("formBox").style.display="none";
+document.getElementById("invoice").style.display="block";
+document.getElementById("footer").style.display="block";
+
+document.getElementById("isiInvoice").innerHTML=`
+Nama: ${nama}<br>
+Email: ${email}<br>
+No HP: ${hp}<br>
+Destinasi: ${destinasi}<br>
+Kendaraan: ${kendaraan}<br>
+Jumlah Orang: ${orang}<br>
+Tanggal: ${tanggal}<br>
+Catatan: ${catatan}
+`;
+
+document.getElementById("hargaPerOrang").innerHTML=
+"Harga tiket: Rp "+harga.toLocaleString("id-ID");
+
+document.getElementById("totalHarga").innerHTML=
+"Total biaya: Rp "+total.toLocaleString("id-ID");
+
+}
+
+function kembali(){
+document.getElementById("invoice").style.display="none";
+document.getElementById("formBox").style.display="block";
+document.getElementById("footer").style.display="none";
+}
+
+</script>
+
+</body>
+</html>

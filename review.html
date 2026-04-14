@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review Wisata Siak</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#FFFACD;
+padding-top:90px;
+}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+height:70px;
+display:flex;
+align-items:center;
+padding:0 15px;
+z-index:100;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(10px);
+transition:0.4s;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#FFD84D;
+margin-right:20px;
+}
+
+.menu{
+display:flex;
+gap:22px;
+overflow-x:auto;
+white-space:nowrap;
+scrollbar-width:none;
+}
+
+.menu::-webkit-scrollbar{
+display:none;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-size:16px;
+}
+
+.menu a:hover{
+color:#FFD84D;
+}
+
+/* NAVBAR SCROLL */
+.navbar.active{
+background:#fff9c4;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.navbar.active .menu a,
+.navbar.active .logo{
+color:#333;
+}
+
+/* BACK BUTTON */
+.back-btn{
+display:inline-block;
+margin:20px;
+padding:10px 20px;
+font-weight:bold;
+color:white;
+text-decoration:none;
+border-radius:10px;
+background:linear-gradient(45deg,#FFD54F,#FF9800);
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* JUDUL */
+header{
+text-align:center;
+padding:20px;
+font-size:28px;
+font-weight:bold;
+color:#5D4037;
+}
+
+/* CONTAINER REVIEW */
+.container{
+max-width:800px;
+margin:auto;
+padding:20px;
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+/* CARD REVIEW */
+.card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+padding:15px;
+
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.user{
+font-weight:bold;
+margin-bottom:10px;
+color:#333;
+}
+
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 15px;
+background:#F5C857;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:#e0ad2b;
+}
+
+/* SECTION */
+section{
+max-width:800px;
+margin:auto;
+padding:20px;
+}
+
+/* JUDUL TENTANG */
+section h2{
+text-align:center;
+color:#5D4037;
+}
+
+/* KOTAK TENTANG */
+.about-card{
+background:linear-gradient(135deg,#FFF9C4,#FFD54F);
+padding:20px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+margin-top:15px;
+
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+}
+
+.about-card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.about-card p{
+color:#4E342E;
+line-height:1.7;
+text-align:justify;
+margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+background:#FFEB7A;
+text-align:center;
+padding:10px;
+margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar" id="navbar">
+
+<div class="logo">Siak</div>
+
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="wisata.html">Wisata</a>
+<a href="budaya.html">Budaya</a>
+<a href="kuliner.html">Kuliner</a>
+<a href="galery.html">Galery</a>
+<a href="hotel.html">Hotel</a>
+<a href="transportasi.html">Transportasi</a>
+<a href="event.html">Event</a>
+<a href="review.html">Review</a>
+<a href="pusatbantuan.html">Pusat Bantuan</a>
+<a href="peta.html">Peta</a>
+<a href="rencana.html">Rencana</a>
+<a href="kerangkawaktu.html">Kerangka</a>
+<a href="pemesanan.html">Pemesanan</a>
+</div>
+
+</div>
+
+<!-- BACK -->
+<a href="index.html" class="back-btn">⬅ Back</a>
+
+<header>Review Wisata Kabupaten Siak</header>
+
+<!-- REVIEW INSTAGRAM -->
+<div class="container">
+
+<div class="card">
+<div class="user">@wisata.siak</div>
+
+<blockquote class="instagram-media"
+data-instgrm-permalink="https://www.instagram.com/reel/DH_U1_cTwhG/"
+data-instgrm-version="14"
+style="width:100%;">
+</blockquote>
+
+<a class="btn" href="https://www.instagram.com/reel/DH_U1_cTwhG/" target="_blank">
+Buka di Instagram
+</a>
+</div>
+
+<div class="card">
+<div class="user">@wisata.siak</div>
+
+<blockquote class="instagram-media"
+data-instgrm-permalink="https://www.instagram.com/reel/C9jR8LipWqa/"
+data-instgrm-version="14"
+style="width:100%;">
+</blockquote>
+
+<a class="btn" href="https://www.instagram.com/reel/C9jR8LipWqa/" target="_blank">
+Buka di Instagram
+</a>
+</div>
+
+<div class="card">
+<div class="user">@wisata.siak</div>
+
+<blockquote class="instagram-media"
+data-instgrm-permalink="https://www.instagram.com/reel/DBOQmWGNJdA/"
+data-instgrm-version="14"
+style="width:100%;">
+</blockquote>
+
+<a class="btn" href="https://www.instagram.com/reel/DBOQmWGNJdA/" target="_blank">
+Buka di Instagram
+</a>
+</div>
+
+</div>
+
+<script async src="https://www.instagram.com/embed.js"></script>
+
+<!-- TENTANG -->
+<section>
+
+<h2>Tentang</h2>
+
+<div class="about-card">
+
+<p>
+Website ini dibuat untuk menampilkan review wisata Kabupaten Siak berdasarkan postingan Instagram. Konten yang ditampilkan berupa video dan gambar yang memperlihatkan keindahan wisata di Siak.
+</p>
+
+<p>
+Melalui website ini, pengguna dapat melihat pengalaman wisata secara lebih nyata sebelum berkunjung langsung ke lokasi seperti Istana Siak, Sungai Siak, wisata budaya, dan kuliner khas daerah.
+</p>
+
+<p>
+Tujuan utama website ini adalah memberikan informasi wisata yang lebih menarik, modern, dan mudah diakses melalui media sosial Instagram.
+</p>
+
+<p>
+Dengan adanya website ini, diharapkan masyarakat lebih mengenal dan tertarik untuk mengunjungi Kabupaten Siak sebagai salah satu destinasi wisata unggulan di Riau.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+<p>© sania hermawati 2026</p>
+</footer>
+
+<script>
+
+/* animasi scroll */
+const cards=document.querySelectorAll('.card, .about-card');
+
+function reveal(){
+
+const trigger=window.innerHeight*0.85;
+
+cards.forEach(card=>{
+
+const top=card.getBoundingClientRect().top;
+
+if(top<trigger){
+card.classList.add('show');
+}
+
+});
+
+}
+
+window.addEventListener('scroll',reveal);
+reveal();
+
+/* navbar scroll */
+window.addEventListener("scroll",function(){
+
+let navbar=document.getElementById("navbar");
+
+if(window.scrollY>50){
+navbar.classList.add("active");
+}else{
+navbar.classList.remove("active");
+}
+
+});
+
+</script>
+
+</body>
+</html>

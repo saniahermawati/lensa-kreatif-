@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pusat Bantuan Wisata Siak</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#FFFACD;
+padding-top:90px;
+color:#333;
+}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+height:70px;
+display:flex;
+align-items:center;
+padding:0 15px;
+z-index:100;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(10px);
+transition:0.4s;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#FFD84D;
+margin-right:20px;
+}
+
+.menu{
+display:flex;
+gap:22px;
+overflow-x:auto;
+white-space:nowrap;
+scrollbar-width:none;
+}
+
+.menu::-webkit-scrollbar{
+display:none;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-size:16px;
+}
+
+.menu a:hover{
+color:#FFD84D;
+}
+
+/* NAVBAR SCROLL */
+.navbar.active{
+background:#fff9c4;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.navbar.active .menu a,
+.navbar.active .logo{
+color:#333;
+}
+
+/* BACK BUTTON */
+.back-btn{
+display:inline-block;
+margin:20px;
+padding:10px 20px;
+font-weight:bold;
+color:white;
+text-decoration:none;
+border-radius:10px;
+background:linear-gradient(45deg,#FFD54F,#FF9800);
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* HEADER */
+header{
+text-align:center;
+font-size:28px;
+font-weight:bold;
+color:#5D4037;
+padding:10px;
+}
+
+/* SECTION */
+.section{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+/* CARD */
+.card, .small-card, .about-card{
+background:linear-gradient(135deg,#FFF9C4,#FFD54F);
+padding:18px;
+margin:18px 0;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+}
+
+.card.show,
+.small-card.show,
+.about-card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.title{
+font-size:18px;
+font-weight:bold;
+margin-bottom:8px;
+color:#5D4037;
+}
+
+.card p, .card li{
+color:#4E342E;
+line-height:1.6;
+}
+
+ul{
+padding-left:20px;
+}
+
+/* TENTANG */
+.about{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+.about h2{
+text-align:center;
+font-size:28px;
+margin-top:10px;
+}
+
+.about-card p{
+text-align:justify;
+line-height:1.7;
+color:#4E342E;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar" id="navbar">
+
+<div class="logo">Siak</div>
+
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="wisata.html">Wisata</a>
+<a href="budaya.html">Budaya</a>
+<a href="kuliner.html">Kuliner</a>
+<a href="galery.html">Galery</a>
+<a href="hotel.html">Hotel</a>
+<a href="transportasi.html">Transportasi</a>
+<a href="event.html">Event</a>
+<a href="review.html">Review</a>
+<a href="peta.html">Peta</a>
+<a href="pemesanan.html">Pemesanan</a>
+</div>
+
+</div>
+
+<!-- BACK -->
+<a href="index.html" class="back-btn">⬅ Back</a>
+
+<header>
+Pusat Bantuan Wisata Kabupaten Siak
+</header>
+
+<div class="section">
+
+<!-- CARD 1 -->
+<div class="card">
+
+<div class="title">Nomor Darurat</div>
+<p>Polisi: 110</p>
+<p>Ambulans: 119</p>
+<p>Pemadam Kebakaran: 113</p>
+<p>Darurat Umum: 112</p>
+
+<div class="title">Informasi Wisata</div>
+<p>+62 812-XXXX-XXXX</p>
+
+<div class="title">Rumah Sakit Terdekat</div>
+<p>RSUD Siak Sri Indrapura</p>
+<p>RS Pratama Siak</p>
+
+<div class="title">Pos Polisi Wisata</div>
+<p>Pos Polisi Kota Siak</p>
+<p>Pos Jembatan Siak</p>
+
+</div>
+
+<!-- CARD 2 -->
+<div class="card">
+
+<div class="title">Keamanan Wisata</div>
+<ul>
+<li>Ikuti aturan di tempat wisata</li>
+<li>Jangan masuk area berbahaya</li>
+<li>Jaga barang pribadi</li>
+<li>Hindari cuaca buruk</li>
+<li>Ikuti arahan petugas</li>
+</ul>
+
+</div>
+
+<!-- CUACA -->
+<div class="small-card">
+
+<div class="title">Cek Cuaca Siak</div>
+<p>Periksa kondisi cuaca sebelum berwisata agar perjalanan lebih aman dan nyaman.</p>
+
+</div>
+
+</div>
+
+<!-- TENTANG -->
+<div class="about">
+
+<h2>Tentang</h2>
+
+<div class="about-card">
+
+<p>
+Pusat Bantuan Wisata Kabupaten Siak ini dibuat untuk membantu wisatawan mendapatkan informasi penting selama berwisata. Mulai dari nomor darurat, layanan kesehatan, keamanan, hingga informasi umum yang dibutuhkan saat berada di Kabupaten Siak.
+</p>
+
+<p>
+Dengan adanya pusat bantuan ini, diharapkan wisatawan dapat merasa lebih aman, nyaman, dan terbantu selama perjalanan wisata di berbagai destinasi seperti Istana Siak, Sungai Siak, dan tempat wisata lainnya.
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const cards=document.querySelectorAll('.card, .small-card, .about-card');
+
+function reveal(){
+const trigger=window.innerHeight*0.85;
+
+cards.forEach(card=>{
+const top=card.getBoundingClientRect().top;
+if(top<trigger){
+card.classList.add('show');
+}
+});
+}
+
+window.addEventListener('scroll',reveal);
+reveal();
+
+/* navbar scroll */
+window.addEventListener("scroll",function(){
+let navbar=document.getElementById("navbar");
+if(window.scrollY>50){
+navbar.classList.add("active");
+}else{
+navbar.classList.remove("active");
+}
+});
+
+</script>
+
+</body>
+</html>

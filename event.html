@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Kabupaten Siak</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#FFFACD;
+padding-top:90px;
+}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+height:70px;
+display:flex;
+align-items:center;
+padding:0 15px;
+z-index:100;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(10px);
+transition:0.4s;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#FFD84D;
+margin-right:20px;
+}
+
+.menu{
+display:flex;
+gap:22px;
+overflow-x:auto;
+white-space:nowrap;
+scrollbar-width:none;
+}
+
+.menu::-webkit-scrollbar{
+display:none;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-size:16px;
+}
+
+.menu a:hover{
+color:#FFD84D;
+}
+
+/* NAVBAR SCROLL */
+.navbar.active{
+background:#fff9c4;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.navbar.active .menu a,
+.navbar.active .logo{
+color:#333;
+}
+
+/* BACK BUTTON */
+.back-btn{
+display:inline-block;
+margin:20px;
+padding:10px 20px;
+font-weight:bold;
+color:white;
+text-decoration:none;
+border-radius:10px;
+background:linear-gradient(45deg,#FFD54F,#FF9800);
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* JUDUL */
+h2{
+text-align:center;
+padding:10px;
+font-size:28px;
+}
+
+/* SECTION */
+section{
+padding:30px;
+text-align:center;
+}
+
+/* CARD */
+.card{
+background:linear-gradient(135deg,#FFF9C4,#FFD54F);
+margin:20px auto;
+width:85%;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+overflow:hidden;
+
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* GAMBAR FULL */
+.card img{
+width:100%;
+height:280px;
+object-fit:cover;
+display:block;
+}
+
+/* DESKRIPSI */
+.desc{
+padding:18px;
+text-align:left;
+}
+
+.desc h3{
+margin:0;
+color:#5D4037;
+font-size:20px;
+}
+
+.desc p{
+margin-top:10px;
+color:#4E342E;
+line-height:1.6;
+text-align:justify;
+}
+
+/* FOOTER */
+footer{
+background:#FFEB7A;
+text-align:center;
+padding:10px;
+margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar" id="navbar">
+
+<div class="logo">Siak</div>
+
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="wisata.html">Wisata</a>
+<a href="budaya.html">Budaya</a>
+<a href="kuliner.html">Kuliner</a>
+<a href="galery.html">Galery</a>
+<a href="hotel.html">Hotel</a>
+<a href="transportasi.html">Transportasi</a>
+<a href="event.html">Event</a>
+<a href="review.html">Review</a>
+<a href="pusatbantuan.html">Pusat Bantuan</a>
+<a href="peta.html">Peta</a>
+<a href="rencana.html">Rencana</a>
+<a href="kerangkawaktu.html">Kerangka</a>
+<a href="pemesanan.html">Pemesanan</a>
+</div>
+
+</div>
+
+<!-- BACK -->
+<a href="index.html" class="back-btn">⬅ Back</a>
+
+<h2>Event Kabupaten Siak</h2>
+
+<!-- EVENT -->
+<section>
+
+<div class="card">
+<img src="https://image2url.com/r2/default/images/1775298273811-3f952a58-8b98-4486-a5de-4469dcfb3c52.jpg">
+
+<div class="desc">
+<h3>Siak Festival</h3>
+<p>
+Siak Festival merupakan salah satu acara budaya terbesar di Kabupaten Siak yang menampilkan berbagai pertunjukan seni tradisional Melayu seperti tarian daerah, musik tradisional, serta berbagai kegiatan budaya lainnya. Festival ini biasanya diikuti oleh masyarakat lokal maupun wisatawan yang ingin melihat langsung kekayaan budaya daerah Siak.
+</p>
+</div>
+
+</div>
+
+<div class="card">
+<img src="https://image2url.com/r2/default/images/1775298362567-66240c79-4538-46c3-93f4-d56179d2bff8.jpg">
+
+<div class="desc">
+<h3>River Carnival</h3>
+<p>
+River Carnival merupakan event yang diadakan di Sungai Siak dengan berbagai kegiatan menarik seperti perlombaan perahu dan pertunjukan budaya di sekitar sungai. Kegiatan ini menjadi salah satu daya tarik wisata yang memperlihatkan kehidupan masyarakat yang dekat dengan sungai serta budaya maritim yang masih dilestarikan.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- WISATA -->
+<section>
+
+<h2>Wisata</h2>
+
+<div class="card">
+<img src="https://image2url.com/r2/default/images/1775299102694-aa935dc9-22f7-4cfa-85ac-9871d1ab5b5c.jpg">
+
+<div class="desc">
+<h3>Istana Siak</h3>
+<p>
+Istana Siak Sri Indrapura merupakan bangunan bersejarah yang menjadi simbol kejayaan Kesultanan Siak pada masa lampau. Bangunan ini memiliki arsitektur yang unik dengan perpaduan budaya Melayu, Eropa, dan Timur Tengah. Saat ini istana tersebut menjadi salah satu objek wisata utama di Kabupaten Siak.
+</p>
+</div>
+
+</div>
+
+<div class="card">
+<img src="https://image2url.com/r2/default/images/1775299153841-bbe1cf95-7cb5-401a-83ae-0292899e8205.jpg">
+
+<div class="desc">
+<h3>Sungai Siak</h3>
+<p>
+Sungai Siak merupakan salah satu sungai terbesar di Provinsi Riau yang memiliki peranan penting dalam kehidupan masyarakat. Selain digunakan sebagai jalur transportasi, sungai ini juga menjadi daya tarik wisata karena pemandangannya yang indah serta berbagai kegiatan wisata yang sering diadakan di sekitarnya.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TENTANG -->
+<section>
+
+<h2>Tentang</h2>
+
+<div class="card">
+
+<div class="desc">
+<p>
+Kabupaten Siak merupakan daerah yang kaya akan budaya Melayu dan memiliki banyak event wisata menarik seperti festival budaya, lomba perahu, dan berbagai kegiatan seni tradisional. Event-event tersebut tidak hanya menjadi hiburan bagi masyarakat tetapi juga menjadi sarana untuk melestarikan budaya daerah serta menarik wisatawan untuk berkunjung ke Kabupaten Siak.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© sania hermawati 2026</p>
+</footer>
+
+<script>
+
+/* animasi card muncul */
+const cards=document.querySelectorAll('.card');
+
+function reveal(){
+
+const trigger=window.innerHeight*0.85;
+
+cards.forEach(card=>{
+
+const top=card.getBoundingClientRect().top;
+
+if(top<trigger){
+card.classList.add('show');
+}
+
+});
+
+}
+
+window.addEventListener('scroll',reveal);
+reveal();
+
+/* navbar scroll */
+window.addEventListener("scroll",function(){
+
+let navbar=document.getElementById("navbar");
+
+if(window.scrollY>50){
+navbar.classList.add("active");
+}else{
+navbar.classList.remove("active");
+}
+
+});
+
+</script>
+
+</body>
+</html>

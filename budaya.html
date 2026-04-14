@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budaya Siak</title>
+
+<style>
+
+body{
+font-family:Arial, sans-serif;
+background:#FFFACD;
+margin:0;
+padding-top:90px;
+}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+height:70px;
+display:flex;
+align-items:center;
+padding:0 15px;
+z-index:100;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(10px);
+transition:0.4s;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#FFD84D;
+margin-right:20px;
+white-space:nowrap;
+}
+
+.menu{
+display:flex;
+gap:22px;
+overflow-x:auto;
+white-space:nowrap;
+scrollbar-width:none;
+}
+
+.menu::-webkit-scrollbar{
+display:none;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-size:16px;
+flex-shrink:0;
+}
+
+.menu a:hover{
+color:#FFD84D;
+}
+
+/* NAVBAR SCROLL */
+.navbar.active{
+background:#fff9c4;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.navbar.active .menu a,
+.navbar.active .logo{
+color:#333;
+}
+
+/* BACK BUTTON */
+.back-btn{
+display:inline-block;
+margin:20px 0 0 20px;
+padding:10px 20px;
+font-size:15px;
+font-weight:bold;
+color:white;
+text-decoration:none;
+border-radius:10px;
+background:linear-gradient(45deg,#FFD54F,#FF9800);
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* JUDUL */
+h2{
+text-align:center;
+padding:20px;
+font-size:28px;
+}
+
+/* CONTAINER */
+.container{
+display:flex;
+flex-direction:column;
+gap:20px;
+padding:20px;
+max-width:800px;
+margin:auto;
+}
+
+/* CARD */
+.card{
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+background:linear-gradient(135deg,#FFF9C4,#FFD54F);
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+/* DESKRIPSI */
+.desc{
+padding:18px;
+}
+
+.desc h3{
+margin:0;
+font-size:20px;
+color:#5D4037;
+}
+
+.desc p{
+font-size:14px;
+color:#4E342E;
+margin-top:10px;
+text-align:justify;
+line-height:1.6;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar" id="navbar">
+
+<div class="logo">Siak</div>
+
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="wisata.html">Wisata</a>
+<a href="budaya.html">Budaya</a>
+<a href="kuliner.html">Kuliner</a>
+<a href="galery.html">Galery</a>
+<a href="hotel.html">Hotel</a>
+<a href="transportasi.html">Transportasi</a>
+<a href="event.html">Event</a>
+<a href="review.html">Review</a>
+<a href="pusatbantuan.html">Pusat Bantuan</a>
+<a href="peta.html">Peta</a>
+<a href="rencana.html">Rencana</a>
+<a href="kerangkawaktu.html">Kerangka</a>
+<a href="pemesanan.html">Pemesanan</a>
+</div>
+
+</div>
+
+<!-- BACK -->
+<a href="index.html" class="back-btn">⬅ Back</a>
+
+<h2>Budaya Kabupaten Siak</h2>
+
+<div class="container">
+
+<!-- Tari Zapin -->
+<div class="card">
+<img src="https://image2url.com/r2/default/images/1774874289306-baf2621b-0080-4dce-8b3c-9ef267d1f898.jpg">
+
+<div class="desc">
+<h3>Tari Zapin</h3>
+
+<p>
+Tari Zapin merupakan salah satu tarian tradisional masyarakat Melayu yang berkembang di wilayah Riau termasuk Kabupaten Siak. Tarian ini memiliki gerakan yang lembut, cepat, dan teratur mengikuti irama musik gambus dan marwas. Tari Zapin awalnya dibawa oleh para ulama dari Timur Tengah yang datang untuk menyebarkan agama Islam di wilayah Melayu.
+
+Dalam perkembangannya, tarian ini kemudian bercampur dengan budaya Melayu sehingga menjadi kesenian khas daerah. Gerakan kaki yang ritmis dan kompak menjadi ciri khas dari Tari Zapin. Tarian ini biasanya ditampilkan secara berpasangan dan memiliki makna yang menggambarkan kesopanan, keindahan, serta keharmonisan dalam kehidupan masyarakat Melayu.
+
+Saat ini Tari Zapin sering dipentaskan dalam berbagai acara adat seperti pernikahan, penyambutan tamu penting, festival budaya, serta kegiatan seni yang diadakan di Kabupaten Siak.
+</p>
+
+</div>
+</div>
+
+<!-- Pacu Jalur -->
+<div class="card">
+<img src="https://image2url.com/r2/default/images/1774873357949-304e7058-e495-4c6f-8416-e3c8548db25c.jpg">
+
+<div class="desc">
+<h3>Pacu Jalur</h3>
+
+<p>
+Pacu Jalur merupakan tradisi perlombaan perahu panjang yang sangat terkenal di Provinsi Riau dan juga dikenal oleh masyarakat di wilayah Siak. Jalur adalah perahu kayu panjang yang dibuat dari satu batang kayu besar dan dapat diisi oleh puluhan orang pendayung.
+
+Dalam satu jalur biasanya terdapat sekitar 40 hingga 60 orang yang bekerja sama mendayung perahu dengan irama yang sama agar dapat melaju dengan cepat di sungai. Tradisi ini telah ada sejak ratusan tahun yang lalu dan awalnya digunakan sebagai alat transportasi masyarakat yang tinggal di sekitar sungai.
+
+Seiring berjalannya waktu, Pacu Jalur berkembang menjadi sebuah festival budaya yang meriah dan menarik banyak wisatawan. Tradisi ini juga menjadi simbol kekompakan, kerja sama, dan kebersamaan masyarakat Melayu.
+</p>
+
+</div>
+</div>
+
+<!-- Tenun Siak -->
+<div class="card">
+<img src="https://image2url.com/r2/default/images/1774874633888-5ae39407-c4f7-4857-8069-73f15a3608c8.jpg">
+
+<div class="desc">
+<h3>Tenun Siak</h3>
+
+<p>
+Tenun Siak merupakan salah satu kerajinan tradisional khas Kabupaten Siak yang dibuat menggunakan alat tenun tradisional secara manual oleh para pengrajin. Kain tenun ini memiliki motif yang indah dan biasanya terinspirasi dari alam, budaya Melayu, serta simbol-simbol kerajaan.
+
+Proses pembuatan Tenun Siak membutuhkan ketelitian dan waktu yang cukup lama karena setiap benang harus disusun dengan rapi untuk menghasilkan motif yang sempurna. Pada masa Kesultanan Siak dahulu, kain Tenun Siak sering digunakan oleh keluarga kerajaan dan bangsawan sebagai pakaian adat dalam acara resmi.
+
+Hingga saat ini Tenun Siak masih dilestarikan sebagai warisan budaya daerah dan sering digunakan dalam acara adat, festival budaya, maupun kegiatan resmi masyarakat Melayu.
+</p>
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+/* ANIMASI CARD */
+const cards=document.querySelectorAll('.card');
+
+window.addEventListener('scroll',()=>{
+
+const trigger=window.innerHeight*0.85;
+
+cards.forEach(card=>{
+const top=card.getBoundingClientRect().top;
+
+if(top<trigger){
+card.classList.add('show');
+}
+
+});
+
+});
+
+/* NAVBAR SCROLL */
+
+window.addEventListener("scroll",function(){
+
+let navbar=document.getElementById("navbar");
+
+if(window.scrollY>50){
+navbar.classList.add("active");
+}else{
+navbar.classList.remove("active");
+}
+
+});
+
+</script>
+
+</body>
+</html>

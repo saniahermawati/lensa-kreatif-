@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Itinerary Wisata Kabupaten Siak</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#FFFACD;
+padding-top:90px;
+color:#333;
+}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+height:70px;
+display:flex;
+align-items:center;
+padding:0 15px;
+z-index:100;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(10px);
+transition:0.4s;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#FFD84D;
+margin-right:20px;
+}
+
+.menu{
+display:flex;
+gap:22px;
+overflow-x:auto;
+white-space:nowrap;
+scrollbar-width:none;
+}
+
+.menu::-webkit-scrollbar{
+display:none;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-size:16px;
+}
+
+.menu a:hover{
+color:#FFD84D;
+}
+
+/* NAVBAR SCROLL */
+.navbar.active{
+background:#fff9c4;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.navbar.active .menu a,
+.navbar.active .logo{
+color:#333;
+}
+
+/* BACK BUTTON */
+.back-btn{
+display:inline-block;
+margin:20px;
+padding:10px 20px;
+font-weight:bold;
+color:white;
+text-decoration:none;
+border-radius:10px;
+background:linear-gradient(45deg,#FFD54F,#FF9800);
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* HEADER */
+header{
+text-align:center;
+font-size:28px;
+font-weight:bold;
+color:#5D4037;
+padding:10px;
+}
+
+/* CONTAINER */
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+/* CARD */
+.card{
+background:linear-gradient(135deg,#FFF9C4,#FFD54F);
+padding:18px;
+margin:18px 0;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.day{
+font-size:18px;
+font-weight:bold;
+margin-bottom:8px;
+color:#5D4037;
+}
+
+.card p{
+color:#4E342E;
+line-height:1.6;
+}
+
+/* TENTANG */
+.about{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+.about h2{
+text-align:center;
+font-size:28px;
+margin-bottom:15px;
+}
+
+.about-card{
+background:linear-gradient(135deg,#FFF9C4,#FFD54F);
+padding:20px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+}
+
+.about-card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.about-card p{
+text-align:justify;
+line-height:1.7;
+color:#4E342E;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar" id="navbar">
+
+<div class="logo">Siak</div>
+
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="wisata.html">Wisata</a>
+<a href="budaya.html">Budaya</a>
+<a href="kuliner.html">Kuliner</a>
+<a href="galery.html">Galery</a>
+<a href="hotel.html">Hotel</a>
+<a href="transportasi.html">Transportasi</a>
+<a href="event.html">Event</a>
+<a href="review.html">Review</a>
+<a href="pusatbantuan.html">Pusat Bantuan</a>
+<a href="peta.html">Peta</a>
+<a href="rencana.html">Rencana</a>
+<a href="kerangkawaktu.html">Kerangka</a>
+<a href="pemesanan.html">Pemesanan</a>
+</div>
+
+</div>
+
+<!-- BACK -->
+<a href="index.html" class="back-btn">⬅ Back</a>
+
+<header>
+Itinerary Wisata 1 Minggu Kabupaten Siak
+</header>
+
+<div class="container">
+
+<div class="card">
+<div class="day">Hari 1 – Kedatangan & Kota Siak</div>
+<p>Check-in hotel, jalan santai di Kota Siak Sri Indrapura, dan menikmati kuliner malam khas daerah.</p>
+</div>
+
+<div class="card">
+<div class="day">Hari 2 – Wisata Sejarah</div>
+<p>Kunjungan ke Istana Siak Sri Indrapura, museum, serta berfoto di area istana yang menjadi ikon sejarah Kabupaten Siak.</p>
+</div>
+
+<div class="card">
+<div class="day">Hari 3 – Jembatan Ikonik</div>
+<p>Wisata ke Jembatan Tengku Agung Sultanah Latifah untuk menikmati pemandangan kota dan sunset yang indah.</p>
+</div>
+
+<div class="card">
+<div class="day">Hari 4 – Wisata Sungai</div>
+<p>Menyusuri Sungai Siak menggunakan perahu sambil menikmati pemandangan alam dan aktivitas masyarakat di sekitar sungai.</p>
+</div>
+
+<div class="card">
+<div class="day">Hari 5 – Danau Zamrud</div>
+<p>Kunjungan ke Danau Zamrud untuk menikmati wisata alam, piknik santai, serta mengabadikan momen dengan berfoto.</p>
+</div>
+
+<div class="card">
+<div class="day">Hari 6 – Desa & Kuliner</div>
+<p>Mengunjungi desa wisata, melihat kehidupan masyarakat lokal, dan mencoba berbagai makanan khas Kabupaten Siak.</p>
+</div>
+
+<div class="card">
+<div class="day">Hari 7 – Pulang</div>
+<p>Persiapan pulang, membeli oleh-oleh khas Siak, dan melanjutkan perjalanan kembali ke kota asal.</p>
+</div>
+
+</div>
+
+<!-- TENTANG -->
+<div class="about">
+
+<h2>Tentang</h2>
+
+<div class="about-card">
+
+<p>
+Itinerary wisata Kabupaten Siak ini dibuat untuk memberikan gambaran perjalanan bagi wisatawan yang ingin menjelajahi berbagai destinasi menarik di daerah tersebut. Dalam waktu satu minggu, wisatawan dapat menikmati wisata sejarah, wisata alam, wisata budaya, serta kuliner khas daerah Siak.
+</p>
+
+<p>
+Dengan adanya rencana perjalanan ini, pengunjung dapat mengatur waktu perjalanan dengan lebih baik sehingga dapat mengunjungi berbagai tempat wisata populer seperti Istana Siak, Sungai Siak, Jembatan Tengku Agung Sultanah Latifah, dan Danau Zamrud.
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+/* animasi scroll */
+const cards=document.querySelectorAll('.card,.about-card');
+
+function reveal(){
+
+const trigger=window.innerHeight*0.85;
+
+cards.forEach(card=>{
+
+const top=card.getBoundingClientRect().top;
+
+if(top<trigger){
+card.classList.add('show');
+}
+
+});
+
+}
+
+window.addEventListener('scroll',reveal);
+reveal();
+
+/* navbar scroll */
+window.addEventListener("scroll",function(){
+
+let navbar=document.getElementById("navbar");
+
+if(window.scrollY>50){
+navbar.classList.add("active");
+}else{
+navbar.classList.remove("active");
+}
+
+});
+
+</script>
+
+</body>
+</html>

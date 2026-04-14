@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuliner Siak</title>
+
+<style>
+
+body{
+font-family:Arial, sans-serif;
+background:#FFFACD;
+margin:0;
+padding-top:90px;
+}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+height:70px;
+display:flex;
+align-items:center;
+padding:0 15px;
+z-index:100;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(10px);
+transition:0.4s;
+}
+
+/* LOGO */
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#FFD84D;
+margin-right:20px;
+white-space:nowrap;
+}
+
+/* MENU */
+.menu{
+display:flex;
+gap:22px;
+overflow-x:auto;
+white-space:nowrap;
+scrollbar-width:none;
+}
+
+.menu::-webkit-scrollbar{
+display:none;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-size:16px;
+flex-shrink:0;
+transition:0.3s;
+}
+
+.menu a:hover{
+color:#FFD84D;
+}
+
+/* NAVBAR SAAT SCROLL */
+.navbar.active{
+background:#fff9c4;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.navbar.active .menu a,
+.navbar.active .logo{
+color:#333;
+}
+
+/* BACK BUTTON GRADASI */
+.back-btn{
+display:inline-block;
+margin:20px 0 0 20px;
+padding:10px 20px;
+font-size:15px;
+font-weight:bold;
+color:white;
+text-decoration:none;
+border-radius:10px;
+background:linear-gradient(45deg,#FFD54F,#FF9800);
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.back-btn:hover{
+transform:scale(1.05);
+box-shadow:0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* JUDUL */
+h2{
+text-align:center;
+padding:20px;
+font-size:28px;
+}
+
+/* CONTAINER */
+.container{
+display:flex;
+flex-direction:column;
+gap:20px;
+padding:20px;
+max-width:800px;
+margin:auto;
+}
+
+/* CARD */
+.card{
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+background:linear-gradient(135deg,#FFF9C4,#FFD54F);
+
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* GAMBAR */
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+/* KETERANGAN */
+.desc{
+padding:18px;
+}
+
+.desc h3{
+margin:0;
+font-size:20px;
+color:#5D4037;
+}
+
+.desc p{
+font-size:14px;
+color:#4E342E;
+margin-top:10px;
+text-align:justify;
+line-height:1.6;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar" id="navbar">
+
+<div class="logo">Siak</div>
+
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="wisata.html">Wisata</a>
+<a href="budaya.html">Budaya</a>
+<a href="kuliner.html">Kuliner</a>
+<a href="galery.html">Galery</a>
+<a href="hotel.html">Hotel</a>
+<a href="transportasi.html">Transportasi</a>
+<a href="event.html">Event</a>
+<a href="review.html">Review</a>
+<a href="pusatbantuan.html">Pusat Bantuan</a>
+<a href="peta.html">Peta</a>
+<a href="rencana.html">Rencana</a>
+<a href="kerangkawaktu.html">Kerangka</a>
+<a href="pemesanan.html">Pemesanan</a>
+</div>
+
+</div>
+
+<!-- BACK -->
+<a href="index.html" class="back-btn">⬅ Back</a>
+
+<h2>Kuliner Siak</h2>
+
+<div class="container">
+
+<div class="card">
+<img src="https://image2url.com/r2/default/images/1774958518629-b131e8a6-04ee-474b-9d87-1a76f6b9393f.jpg">
+<div class="desc">
+<h3>Roti Jala Kari Ayam</h3>
+<p>
+Roti jala kari ayam merupakan salah satu kuliner khas Melayu yang populer di Kabupaten Siak dengan roti berbentuk jaring lembut yang disajikan bersama kuah kari ayam yang gurih dan kaya rempah.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://image2url.com/r2/default/images/1774958856000-323a4118-c1c3-4c6d-8719-1d26b88ffd28.jpeg">
+<div class="desc">
+<h3>Mie Sagu</h3>
+<p>
+Mie sagu merupakan makanan khas Riau yang terbuat dari pati sagu sehingga memiliki tekstur kenyal dan unik serta disajikan dengan berbagai bumbu khas yang menambah kelezatan.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://image2url.com/r2/default/images/1774959085739-ff917742-acea-4717-a305-fb15c64cb05d.png">
+<div class="desc">
+<h3>Gulai Ikan Patin</h3>
+<p>
+Gulai ikan patin adalah hidangan khas Melayu dengan kuah santan dan rempah yang kaya rasa sehingga menjadi salah satu ikon kuliner terkenal di Kabupaten Siak.
+</p>
+</div>
+</div>
+
+</div>
+
+<script>
+
+/* ANIMASI CARD */
+const cards=document.querySelectorAll('.card');
+
+window.addEventListener('scroll',()=>{
+const trigger=window.innerHeight*0.85;
+
+cards.forEach(card=>{
+const top=card.getBoundingClientRect().top;
+
+if(top<trigger){
+card.classList.add('show');
+}
+});
+});
+
+/* NAVBAR SCROLL */
+window.addEventListener("scroll",function(){
+
+let navbar=document.getElementById("navbar");
+
+if(window.scrollY>50){
+navbar.classList.add("active");
+}else{
+navbar.classList.remove("active");
+}
+
+});
+
+</script>
+
+</body>
+</html>
