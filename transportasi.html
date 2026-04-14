@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transportasi Wisata Siak</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #FFFACD;
+  margin: 0;
+}
+
+/* JUDUL */
+h2 {
+  text-align: center;
+  padding: 20px;
+  font-size: 28px;
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* CARD */
+.card {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  background: #fff;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* GAMBAR */
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* KETERANGAN */
+.desc {
+  padding: 15px;
+}
+
+.desc h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #F5C857;
+}
+
+.desc p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  text-align: justify;
+  line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Transportasi Wisata Kabupaten Siak</h2>
+
+<div class="container">
+
+  <!-- CARD 1 -->
+  <div class="card">
+    <img src="https://image2url.com/r2/default/images/1775303000000-travel.jpg">
+    <div class="desc">
+      <h3>Mobil Travel Wisata</h3>
+      <p>
+        Mobil travel wisata merupakan transportasi yang paling banyak digunakan oleh wisatawan untuk menuju Kabupaten Siak. 
+        Kendaraan ini biasanya melayani perjalanan dari kota-kota besar seperti Pekanbaru langsung ke pusat wisata Siak. 
+        Dengan fasilitas yang nyaman, AC, dan kapasitas yang cukup, mobil travel sangat cocok untuk perjalanan keluarga maupun rombongan kecil. 
+        Wisatawan dapat langsung diantar ke lokasi seperti Istana Siak dan pusat kota tanpa perlu berpindah kendaraan.
+      </p>
+    </div>
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="card">
+    <img src="https://image2url.com/r2/default/images/1775303100000-bus.jpg">
+    <div class="desc">
+      <h3>Bus Pariwisata</h3>
+      <p>
+        Bus pariwisata sering digunakan oleh rombongan besar seperti sekolah, komunitas, atau tour wisata. 
+        Kendaraan ini memiliki kapasitas besar sehingga bisa membawa banyak penumpang dalam satu perjalanan. 
+        Selain nyaman, bus pariwisata juga dilengkapi fasilitas seperti AC, kursi reclining, dan ruang bagasi yang luas. 
+        Transportasi ini sangat cocok untuk perjalanan wisata ke berbagai destinasi di Kabupaten Siak secara bersama-sama.
+      </p>
+    </div>
+  </div>
+
+  <!-- CARD 3 -->
+  <div class="card">
+    <img src="https://image2url.com/r2/default/images/1775303200000-perahu.jpg">
+    <div class="desc">
+      <h3>Perahu Wisata Sungai Siak</h3>
+      <p>
+        Perahu wisata di Sungai Siak menjadi salah satu daya tarik utama bagi pengunjung. 
+        Transportasi ini digunakan untuk menyusuri Sungai Siak sambil menikmati pemandangan alam yang indah dan suasana khas daerah pesisir. 
+        Selain sebagai alat transportasi, perahu ini juga memberikan pengalaman wisata yang unik dan menyenangkan. 
+        Wisatawan dapat melihat aktivitas masyarakat di sekitar sungai serta menikmati keindahan alam Siak dari sudut yang berbeda.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+  const trigger = window.innerHeight * 0.85;
+
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if(top < trigger){
+      card.classList.add('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>

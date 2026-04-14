@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Siak</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #FFFACD;
+  margin: 0;
+}
+
+/* JUDUL */
+h2 {
+  text-align: center;
+  padding: 20px;
+  font-size: 28px;
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* CARD */
+.card {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  background: #fff;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* GAMBAR */
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* KETERANGAN */
+.desc {
+  padding: 15px;
+}
+
+.desc h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #F5C857;
+}
+
+.desc p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  text-align: justify;
+  line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Hotel di Kabupaten Siak</h2>
+
+<div class="container">
+
+  <!-- CARD 1 -->
+  <div class="card">
+    <img src="https://image2url.com/r2/default/images/1775281570440-46fc1e49-b0f3-4438-8d06-a30786757373.jpg">
+    <div class="desc">
+      <h3>Grand Mempura Hotel</h3>
+      <p>
+        Grand Mempura Hotel merupakan salah satu hotel terbaik di Kabupaten Siak yang menawarkan kenyamanan serta fasilitas yang cukup lengkap bagi para pengunjung. 
+        Hotel ini terletak di lokasi yang strategis sehingga memudahkan wisatawan untuk mengakses berbagai tempat penting di Siak. 
+        Dengan desain bangunan yang modern serta suasana yang nyaman, hotel ini cocok untuk wisatawan maupun keperluan bisnis. 
+        Fasilitas yang disediakan meliputi kamar yang bersih, pelayanan ramah, serta lingkungan yang aman. 
+        Selain itu, lokasinya yang dekat dengan objek wisata seperti Istana Siak menjadikan hotel ini pilihan yang tepat untuk menginap.
+      </p>
+    </div>
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="card">
+    <img src="https://image2url.com/r2/default/images/1775293208119-baaadf22-0bd8-4586-8421-c9b24488a052.webp">
+    <div class="desc">
+      <h3>Penginapan Siak Indah</h3>
+      <p>
+        Penginapan Siak Indah merupakan salah satu pilihan tempat menginap yang terjangkau dan nyaman di Kabupaten Siak. 
+        Penginapan ini cocok bagi wisatawan yang mencari tempat istirahat dengan harga yang ekonomis namun tetap memberikan kenyamanan. 
+        Lokasinya cukup strategis sehingga memudahkan akses menuju berbagai tempat wisata dan pusat kegiatan masyarakat. 
+        Fasilitas yang tersedia cukup memadai dengan suasana yang tenang dan bersih. 
+        Penginapan ini menjadi pilihan favorit bagi pengunjung yang ingin berlibur dengan biaya yang lebih hemat.
+      </p>
+    </div>
+  </div>
+
+  <!-- CARD 3 -->
+  <div class="card">
+    <img src="https://image2url.com/r2/default/images/1775293466848-59d5f80b-c807-46ac-81ef-a9f0178c02e2.jpg">
+    <div class="desc">
+      <h3>Hotel Yasmin Siak</h3>
+      <p>
+        Hotel Yasmin Siak merupakan hotel yang menawarkan kenyamanan dengan harga yang relatif terjangkau di pusat kota Siak. 
+        Hotel ini memiliki lokasi yang strategis sehingga memudahkan pengunjung untuk mengakses berbagai destinasi wisata, tempat makan, dan pusat aktivitas lainnya. 
+        Dengan fasilitas yang cukup lengkap serta pelayanan yang ramah, hotel ini menjadi salah satu pilihan yang baik untuk wisatawan. 
+        Suasana hotel yang nyaman dan bersih membuat pengunjung merasa betah selama menginap. 
+        Hotel ini sangat cocok bagi wisatawan yang ingin menikmati keindahan Siak dengan tempat tinggal yang praktis dan nyaman.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+  const trigger = window.innerHeight * 0.85;
+
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if(top < trigger){
+      card.classList.add('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budaya Siak</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #FFFACD;
+  margin: 0;
+}
+
+/* JUDUL */
+h2 {
+  text-align: center;
+  padding: 20px;
+  font-size: 28px;
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* CARD */
+.card {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  background: #fff;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* GAMBAR */
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* KETERANGAN */
+.desc {
+  padding: 15px;
+}
+
+.desc h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.desc p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  text-align: justify;
+  line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Budaya Siak</h2>
+
+<div class="container">
+
+  <!-- CARD 1 -->
+  <div class="card">
+    <img src="https://image2url.com/r2/default/images/1774874289306-baf2621b-0080-4dce-8b3c-9ef267d1f898.jpg">
+    <div class="desc">
+      <h3>Tari Zapin</h3>
+      <p>
+        Tari Zapin merupakan salah satu tarian tradisional Melayu yang berkembang di wilayah Riau, termasuk Kabupaten Siak. 
+        Tarian ini memiliki pengaruh kuat dari budaya Arab yang masuk melalui jalur perdagangan dan penyebaran agama Islam. 
+        Gerakan dalam Tari Zapin didominasi oleh langkah kaki yang cepat, ritmis, dan teratur sehingga menciptakan kesan dinamis dan menarik. 
+        Biasanya tarian ini dibawakan secara berpasangan dengan diiringi alat musik tradisional seperti gambus dan marwas. 
+        Selain sebagai hiburan, Tari Zapin juga memiliki nilai religius karena dahulu digunakan sebagai media dakwah. 
+        Hingga saat ini, tarian ini tetap dilestarikan dan sering ditampilkan dalam acara adat, festival budaya, serta kegiatan resmi sebagai identitas budaya Melayu.
+      </p>
+    </div>
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="card">
+    <img src="https://image2url.com/r2/default/images/1774873357949-304e7058-e495-4c6f-8416-e3c8548db25c.jpg">
+    <div class="desc">
+      <h3>Pacu Jalur</h3>
+      <p>
+        Pacu Jalur adalah tradisi perlombaan perahu panjang khas Riau yang menjadi salah satu budaya paling terkenal di daerah ini. 
+        Perahu yang digunakan dibuat dari satu batang kayu besar dan mampu menampung banyak pendayung dalam satu tim. 
+        Tradisi ini tidak hanya sekadar perlombaan, tetapi juga melibatkan berbagai ritual adat mulai dari pembuatan perahu hingga pelaksanaan lomba. 
+        Saat perlombaan berlangsung, suasana menjadi sangat meriah dengan sorakan penonton yang menambah semangat para peserta. 
+        Pacu Jalur juga menjadi daya tarik wisata yang mampu menarik banyak pengunjung setiap tahunnya. 
+        Tradisi ini mencerminkan nilai kebersamaan, kerja sama, dan kekompakan masyarakat.
+      </p>
+    </div>
+  </div>
+
+  <!-- CARD 3 -->
+  <div class="card">
+    <img src="https://image2url.com/r2/default/images/1774874633888-5ae39407-c4f7-4857-8069-73f15a3608c8.jpg">
+    <div class="desc">
+      <h3>Tenun Siak</h3>
+      <p>
+        Tenun Siak merupakan kain tradisional khas Melayu yang berasal dari Kerajaan Siak dan memiliki nilai seni yang sangat tinggi. 
+        Kain ini dibuat secara manual menggunakan alat tenun tradisional yang membutuhkan ketelitian, kesabaran, dan keterampilan khusus. 
+        Pada masa lalu, kain ini hanya digunakan oleh kalangan bangsawan sebagai simbol status dan kehormatan. 
+        Setiap motif pada Tenun Siak memiliki makna filosofis yang mencerminkan kehidupan, adat, dan nilai budaya masyarakat Melayu. 
+        Hingga saat ini, Tenun Siak tetap dilestarikan sebagai warisan budaya dan sering digunakan dalam acara adat maupun kegiatan resmi. 
+        Keindahan serta maknanya menjadikan kain ini sebagai salah satu kebanggaan daerah Siak.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+  const trigger = window.innerHeight * 0.85;
+
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if(top < trigger){
+      card.classList.add('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
